@@ -24,17 +24,11 @@
     <xsl:template match="Libro">
         <tr>
             <td><xsl:apply-templates select="isbn"/></td>
-            <xsl:apply-templates select="titulo"/>
-            <xsl:apply-templates select="autor"/>
+            <td><xsl:apply-templates select="titulo"/></td>
+            <td><xsl:apply-templates select="autor"/></td>
             <td><xsl:apply-templates select="precio"/></td>
             <xsl:apply-templates select="numPaginas"/>
         </tr>
-    </xsl:template>
-    <xsl:template match="titulo">
-        <td bgcolor="#0080c0"><xsl:value-of select="."/></td>
-    </xsl:template>
-    <xsl:template match="autor">
-        <td bgcolor="#3E9316"><xsl:value-of select="."/></td>
     </xsl:template>
     <xsl:template match="numPaginas">
         <xsl:choose>
